@@ -14,7 +14,11 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: hashicorp/http-echo:latest
+          image: traefik/whoami:latest
           imagePullPolicy: Always
+          args: ["--port=5678"]
+          env:
+            - name: WHOAMI_NAME
+              value: "practice_pod"
           ports:
             - containerPort: 5678

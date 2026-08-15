@@ -1,7 +1,7 @@
-#/bin/bash
+#!/bin/bash
 
 
-minicube start;
+minikube start;
 kubectl apply -f deployment.yaml;
 kubectl apply -f service.yaml;
 kubectl get pods;
